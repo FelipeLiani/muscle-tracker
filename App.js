@@ -1,7 +1,8 @@
-import Routes from "./src/routes/index";
+import TabRouter from "./src/routes/index";
+
 
 export default function App() {
   return (
-    <Routes />
+    <TabRouter />
   )
 }

@@ -1,10 +1,17 @@
 import { NavigationContainer } from "@react-navigation/native";
-import TabRoutes from "./tab.route";
+// import { StyleSheet } from "react-native";
+import TabRoutes from "./tab.routes";
 
-export default function Routes() {
+export default function TabRouter() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <TabRoutes />
     </NavigationContainer>
   );
 }
+
+ const theme = {
+   colors: {
+     background: 'rgb(2, 4, 15)'
+   }
+ }
