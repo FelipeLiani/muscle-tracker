@@ -10,8 +10,11 @@ export default function TabRouter() {
   );
 }
 
- const theme = {
+ export const theme = {
+
    colors: {
-     background: 'rgb(2, 4, 15)'
+     background: 'rgb(2, 4, 15)',
+     primary: '#E2012A',
+     card: 'rgb(255, 255, 255)'
    }
  }

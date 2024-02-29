@@ -1,19 +1,32 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import Home from '../screens/home';
-import Page from '../screens/page';
-import Settings from '../screens/settings';
-import Feed from '../screens/feed';
+import Workouts from '../screens/workouts';
+import Social from '../screens/social';
+import User from '../screens/user';
+import { Feather } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabRoutes() {
   return (
-    <Tab.Navigator screenOptions={{tabBarStyle: styles.tabBar, headerShown: false}}>
-      <Tab.Screen name="home" component={Home}  options={{tabBarItemStyle: styles.Item}}/>
-      <Tab.Screen name="page" component={Page} options={{tabBarItemStyle: styles.Item}}/>
-      <Tab.Screen name="settings" component={Settings} options={{tabBarItemStyle: styles.Item}}/>
-      <Tab.Screen name="feed" component={Feed} options={{tabBarItemStyle: styles.Item}}/>
+    <Tab.Navigator screenOptions={{tabBarStyle: styles.tabBar, headerShown: false, tabBarShowLabel: false}}>
+      <Tab.Screen name="home" component={Home}  options={{
+        tabBarItemStyle: styles.Item,
+        tabBarIcon: ({color, size}) => <Feather name="home" color={color} size={size}/>
+      }}/>
+      <Tab.Screen name="workouts" component={Workouts} options={{
+        tabBarItemStyle: styles.Item,
+        tabBarIcon: ({color, size}) => <Feather name="box" color={color} size={size}/>
+      }}/>
+      <Tab.Screen name="social" component={Social} options={{
+        tabBarItemStyle: styles.Item,
+        tabBarIcon: ({color, size}) => <Feather name="feather" color={color} size={size}/>
+      }}/>
+      <Tab.Screen name="user" component={User} options={{
+        tabBarItemStyle: styles.Item,
+        tabBarIcon: ({color, size}) => <Feather name="user" color={color} size={size}/>
+      }}/>
     </Tab.Navigator>
   )
 }
@@ -25,8 +38,13 @@ const styles = StyleSheet.create({
     borderRadius: 40
   },
   Item: {
-    backgroundColor: 'blue',
+    backgroundColor: 'rgb(0, 18, 31)',
     borderRadius: 100,
+    elevation: 5, // para dispositivos Android
+    shadowColor: 'black', // para dispositivos iOS
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
     maxWidth: 80,
     minHeight: 75,
     margin: 10,

@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Feed() {
+export default function User() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Feed</Text>
+      <Text style={styles.text}>User</Text>
     </View>
   );
 }

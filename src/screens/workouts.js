@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Page() {
+export default function Workouts() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Page</Text>
+      <Text style={styles.text}>Workouts</Text>
     </View>
   );
 }
