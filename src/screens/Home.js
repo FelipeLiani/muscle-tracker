@@ -1,17 +1,26 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { GlobalStyles } from '../../styles/global.styles';
+import { Feather } from '@expo/vector-icons';
 
 export default function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.text}>Header</Text>
+        <TouchableOpacity style={styles.button}>
+          <Feather name='settings' color='white' size='25' />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Feather name='star' color='white' size='25' />
+        </TouchableOpacity>
       </View>
       <View style={styles.title}>
-        <Text style={styles.text}>title</Text>
+        <Text style={GlobalStyles.title}>Olá Felipe!</Text>
+        <View style={GlobalStyles.titleBar} />
       </View>
-      <View style={styles.main}>
-        <Text style={styles.text}>main</Text>
-      </View>
+      <ScrollView style={styles.main}>
+        <View style={styles.block} />
+        <View style={styles.block} />
+      </ScrollView>
     </View>
   );
 }
@@ -22,31 +31,45 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'rgb(2, 4, 15)',
     alignItems: 'center',
-    // justifyContent: 'center',
   },
   header: {
+    flex: 1,
+    flexDirection: 'row-reverse',
     width: 350,
-    height: 50,
+    maxHeight: 65,
     top: 50,
-    backgroundColor: 'red',
     marginBottom: 10
   },
   title: {
     width: 350,
     height: 100,
     top: 50,
-    backgroundColor: 'blue',
     marginBottom: 10
   },
   main: {
     width: 350,
     height: "auto",
     top: 50,
-    backgroundColor: 'green',
     marginBottom: 10
   },
-
+  block: {
+    backgroundColor: '#000910',
+    width: "full",
+    height: 250,
+    borderRadius: 20,
+    marginBottom: 15
+  },
   text: {
     color: 'white'
+  },
+  button: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000910',
+    marginRight: 8,
+    borderRadius: 100,
+    maxWidth: 70,
+    height: 70,
   }
 });

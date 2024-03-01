@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Social() {
+export default function Registers() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Social</Text>
+      <Text style={styles.text}>Registers</Text>
     </View>
   );
 }

@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet } from 'react-native';
 import Home from '../screens/home';
 import Workouts from '../screens/workouts';
-import Social from '../screens/social';
+import Registers from '../screens/registers';
 import User from '../screens/user';
 import { Feather } from '@expo/vector-icons';
 
@@ -17,11 +17,11 @@ export default function TabRoutes() {
       }}/>
       <Tab.Screen name="workouts" component={Workouts} options={{
         tabBarItemStyle: styles.Item,
-        tabBarIcon: ({color, size}) => <Feather name="box" color={color} size={size}/>
+        tabBarIcon: ({color, size}) => <Feather name="clipboard" color={color} size={size}/>
       }}/>
-      <Tab.Screen name="social" component={Social} options={{
+      <Tab.Screen name="social" component={Registers} options={{
         tabBarItemStyle: styles.Item,
-        tabBarIcon: ({color, size}) => <Feather name="feather" color={color} size={size}/>
+        tabBarIcon: ({color, size}) => <Feather name="layers" color={color} size={size}/>
       }}/>
       <Tab.Screen name="user" component={User} options={{
         tabBarItemStyle: styles.Item,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 2,
     maxWidth: 80,
-    minHeight: 75,
+    minHeight: 80,
     margin: 10,
     bottom: 30
   },
