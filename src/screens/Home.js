@@ -1,22 +1,27 @@
+import 'react-native-gesture-handler';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { GlobalStyles } from '../../styles/global.styles';
 import { Feather } from '@expo/vector-icons';
+import Title from '../components/title';
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {navigation.navigate("settings")}}
+        >
           <Feather name='settings' color='white' size='25' />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {navigation.navigate("go pro!")}}
+        >
           <Feather name='star' color='white' size='25' />
         </TouchableOpacity>
       </View>
-      <View style={styles.title}>
-        <Text style={GlobalStyles.title}>Olá Felipe!</Text>
-        <View style={GlobalStyles.titleBar} />
-      </View>
+      <Title content="Olá John!"/>
       <ScrollView style={styles.main}>
         <View style={styles.block} />
         <View style={styles.block} />
@@ -37,12 +42,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
     width: 350,
     maxHeight: 65,
-    top: 50,
-    marginBottom: 10
-  },
-  title: {
-    width: 350,
-    height: 100,
     top: 50,
     marginBottom: 10
   },

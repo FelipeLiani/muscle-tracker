@@ -1,7 +1,8 @@
-import TabRouter from "./src/routes/index";
+import 'react-native-gesture-handler';
+import NavigationRouter from "./src/routes/navigationRouter";
 
 export default function App() {
   return (
-    <TabRouter />
+      <NavigationRouter />
   )
 }
