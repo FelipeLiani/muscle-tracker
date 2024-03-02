@@ -1,24 +1,38 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { GlobalStyles } from '../../styles/global.styles';
+import { ScrollView, View, TouchableOpacity } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import Title from '../components/title';
+import SubTitle from '../components/subTitle';
+import Option from '../components/option';
 
-export default function Settings() {
+export default function Settings({ navigation }) {
   return (
-    <View style={styles.container}>
+    <View style={GlobalStyles.columnLayout}>
+      <View style={GlobalStyles.headerLeft}>
+        <TouchableOpacity
+          style={GlobalStyles.button}
+          onPress={() => {navigation.navigate("menu")}}
+        >
+          <Feather name='chevron-left' color='white' size='25' />
+        </TouchableOpacity>
+      </View>
       <Title content="Configurações" />
-      <Text style={styles.text}>Settings</Text>
+      <ScrollView style={GlobalStyles.main}>
+        <SubTitle content="ASJDISDAJIODAJIOSD" />
+        <View style={GlobalStyles.block}>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+          <View style={GlobalStyles.optionBar}></View>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+          <View style={GlobalStyles.optionBar}></View>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+          <View style={GlobalStyles.optionBar}></View>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+          <View style={GlobalStyles.optionBar}></View>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+          <View style={GlobalStyles.optionBar}></View>
+          <Option label="opcaoasdasdasdasd" icon="github" />
+        </View>
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgb(2, 4, 15)',
-    minHeight: 'full',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'white'
-  }
-});

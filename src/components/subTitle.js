@@ -1,34 +1,27 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Title = ({ content }) => {
+const SubTitle = ({ content }) => {
   return (
     <View style={styles.title}>
       <Text style={styles.titleText}>{content}</Text>
-      <View style={styles.titleBar} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   title: {
+    flex: 1,
+    flexDirection: 'row-reverse',
     width: 350,
-    height: 100,
-    top: 50,
-    marginBottom: 10
+    height: 80,
+    top: 50
   },
   titleText: {
-    fontWeight: 'bold',
-    fontSize: 40,
+    marginRight: 18,
+    fontSize: 14,
     color: 'white'
-  },
-  titleBar: {
-    width: 150,
-    height: 6,
-    backgroundColor: '#E2012A',
-    marginTop: 5,
-    borderRadius: 20
   }
 })
 
-export default Title;
+export default SubTitle;

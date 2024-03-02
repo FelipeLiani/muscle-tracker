@@ -1,22 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
+import { GlobalStyles } from '../../styles/global.styles';
+import { Feather } from '@expo/vector-icons';
+import Title from '../components/title';
 
-export default function GoPro() {
+export default function GoPro({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Go Pro!</Text>
+    <View style={GlobalStyles.columnLayout}>
+      <View style={GlobalStyles.headerLeft}>
+        <TouchableOpacity
+          style={GlobalStyles.button}
+          onPress={() => {navigation.navigate("menu")}}
+        >
+          <Feather name='chevron-left' color='white' size='25' />
+        </TouchableOpacity>
+      </View>
+      <Title content="Torne-se Pro!" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgb(2, 4, 15)',
-    minHeight: 'full',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'white'
-  }
-});

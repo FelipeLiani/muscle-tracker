@@ -1,74 +1,29 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { GlobalStyles } from '../../styles/global.styles';
+import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import Title from '../components/title';
 
 export default function Home({ navigation }) {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
+    <View style={GlobalStyles.columnLayout}>
+      <View style={GlobalStyles.header}>
         <TouchableOpacity
-          style={styles.button}
+          style={GlobalStyles.button}
           onPress={() => {navigation.navigate("settings")}}
         >
           <Feather name='settings' color='white' size='25' />
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.button}
+          style={GlobalStyles.button}
           onPress={() => {navigation.navigate("go pro!")}}
         >
           <Feather name='star' color='white' size='25' />
         </TouchableOpacity>
       </View>
       <Title content="Olá John!"/>
-      <ScrollView style={styles.main}>
-        <View style={styles.block} />
-        <View style={styles.block} />
+      <ScrollView style={GlobalStyles.main}>
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'rgb(2, 4, 15)',
-    alignItems: 'center',
-  },
-  header: {
-    flex: 1,
-    flexDirection: 'row-reverse',
-    width: 350,
-    maxHeight: 65,
-    top: 50,
-    marginBottom: 10
-  },
-  main: {
-    width: 350,
-    height: "auto",
-    top: 50,
-    marginBottom: 10
-  },
-  block: {
-    backgroundColor: '#000910',
-    width: "full",
-    height: 250,
-    borderRadius: 20,
-    marginBottom: 15
-  },
-  text: {
-    color: 'white'
-  },
-  button: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#000910',
-    marginRight: 8,
-    borderRadius: 100,
-    maxWidth: 70,
-    height: 70,
-  }
-});
