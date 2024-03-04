@@ -13,9 +13,9 @@ const Title = ({ content }) => {
 const styles = StyleSheet.create({
   title: {
     width: 350,
-    height: 100,
+    height: 60,
     top: 50,
-    marginBottom: 10
+    marginBottom: 10,
   },
   titleText: {
     fontWeight: 'bold',

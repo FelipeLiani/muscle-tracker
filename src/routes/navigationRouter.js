@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { NavigationContext } from '@react-navigation/native';
 import { NavigationContainer } from "@react-navigation/native";
-import TabRoutes from "./tab.routes";
 import StackRoutes from "./stack.routes";
 
 export default function NavigationRouter() {

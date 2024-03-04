@@ -2,10 +2,32 @@ import { GlobalStyles } from '../../styles/global.styles';
 import { ScrollView, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import Title from '../components/title';
-import SubTitle from '../components/subTitle';
-import Option from '../components/option';
+import OptionBlock from '../components/optionBlock';
 
 export default function Settings({ navigation }) {
+
+  function navigateToGoPro() {
+    navigation.navigate("go pro!")
+  }
+
+  const Options = {
+    option1: {
+      label: "Trocar tema",
+      icon: "sliders",
+      onPress: navigateToGoPro
+    },
+    option2: {
+      label: "Torne-se Pro!",
+      icon: "shield",
+      onPress: navigateToGoPro
+    },
+    option3: {
+      label: "Sair",
+      icon: "log-out",
+      onPress: navigateToGoPro
+    },
+  }
+
   return (
     <View style={GlobalStyles.columnLayout}>
       <View style={GlobalStyles.headerLeft}>
@@ -18,20 +40,7 @@ export default function Settings({ navigation }) {
       </View>
       <Title content="Configurações" />
       <ScrollView style={GlobalStyles.main}>
-        <SubTitle content="ASJDISDAJIODAJIOSD" />
-        <View style={GlobalStyles.block}>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-          <View style={GlobalStyles.optionBar}></View>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-          <View style={GlobalStyles.optionBar}></View>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-          <View style={GlobalStyles.optionBar}></View>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-          <View style={GlobalStyles.optionBar}></View>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-          <View style={GlobalStyles.optionBar}></View>
-          <Option label="opcaoasdasdasdasd" icon="github" />
-        </View>
+        <OptionBlock options={Options} subtitle="CONFIGURACOES" />
       </ScrollView>
     </View>
   );

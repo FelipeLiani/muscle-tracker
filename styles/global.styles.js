@@ -23,12 +23,12 @@ export const GlobalStyles = StyleSheet.create({
     top: 50,
     marginBottom: 10
   },
-  titleView: {
-    width: 350,
-    height: 100,
-    top: 50,
-    marginBottom: 10
-  },
+ // titleView: {
+   // width: 350,
+   // height: 100,
+  //  top: 50,
+  //  marginBottom: 10
+  // },
   main: {
     flex: 1,
     flexDirection: 'column',
@@ -36,20 +36,6 @@ export const GlobalStyles = StyleSheet.create({
     maxHeight: "auto",
     top: 50,
     marginBottom: 10
-  },
-  block: {
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: '#00111D',
-    width: "full",
-    height: "auto",
-    borderRadius: 20,
-    marginBottom: 15,
-    paddingLeft: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    borderColor:'white',
-    borderWidth: 1
   },
   text: {
     color: 'white',
@@ -65,9 +51,9 @@ export const GlobalStyles = StyleSheet.create({
     maxWidth: 70,
     height: 70,
   },
-  optionBar: {
-    backgroundColor: 'white',
-    width: 'full',
-    height: 0.5,
-  }
+  //optionBar: {
+    //backgroundColor: 'white',
+    //width: 'full',
+    //height: 0.5,
+    //}
 })
