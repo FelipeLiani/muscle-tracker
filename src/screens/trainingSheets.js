@@ -3,9 +3,10 @@ import { GlobalStyles } from '../../styles/global.styles';
 import { Feather } from '@expo/vector-icons';
 import Title from '../components/title';
 import NoTrainingSheet from '../components/noTrainingSheet';
+import TreiningSheetBlock from '../components/treiningSheetBlock';
 
 export default function TrainingSheets({ navigation }) {
-  let empty = true;
+  let empty = false;
 
   return (
     <View style={GlobalStyles.columnLayout}>
@@ -19,7 +20,9 @@ export default function TrainingSheets({ navigation }) {
       </View>
       <Title content="Fichas de treino"/>
       <ScrollView style={GlobalStyles.main}>
-        {empty && <NoTrainingSheet />}
+        {empty && <NoTrainingSheet /> }
+        <TreiningSheetBlock />
+        <TreiningSheetBlock />
       </ScrollView>
     </View>
   );
