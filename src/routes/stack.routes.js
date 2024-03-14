@@ -3,8 +3,6 @@ import TabRoutes from './tab.routes';
 import Settings from '../screens/settings';
 import GoPro from '../screens/goPro';
 
-
-
 const Stack = createStackNavigator();
 
 export default function StackRoutes() {

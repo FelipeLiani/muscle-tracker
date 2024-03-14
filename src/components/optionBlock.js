@@ -51,25 +51,22 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     borderColor:'white',
-    borderWidth: 1,
+    borderWidth: 1
   },
   option: {
     flex: 1,
-    minHeight: 50,
-    //backgroundColor:'green'
+    minHeight: 50
   },
   name: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'left',
     alignItems: 'center',
-    paddingLeft: 10,
+    paddingLeft: 10
   },
   label: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'left',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   icon: {
    paddingRight: 10

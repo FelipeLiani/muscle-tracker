@@ -23,12 +23,6 @@ export const GlobalStyles = StyleSheet.create({
     top: 50,
     marginBottom: 10
   },
- // titleView: {
-   // width: 350,
-   // height: 100,
-  //  top: 50,
-  //  marginBottom: 10
-  // },
   main: {
     flex: 1,
     flexDirection: 'column',
@@ -51,9 +45,4 @@ export const GlobalStyles = StyleSheet.create({
     maxWidth: 70,
     height: 70,
   },
-  //optionBar: {
-    //backgroundColor: 'white',
-    //width: 'full',
-    //height: 0.5,
-    //}
 })

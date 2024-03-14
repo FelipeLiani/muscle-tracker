@@ -1,26 +1,31 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import { Feather } from '@expo/vector-icons';
+import { exercises } from "../classes/exercise/exercise.instances";
+import { muscles } from "../classes/muscle/muscle.instances";
 
 const TreiningSheetBlock = () => {
   return (
-    <View style={styles.block}>
-      <View style={styles.weekBlock}>
-        <Feather style={styles.weekIcon} name='calendar' color='white' size='14' />
-        <Text style={styles.text}>Segunda, Quinta, Sexta, Sabado</Text>
+    <TouchableOpacity style={styles.block}>
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.weekBlock}>
+          <Feather style={styles.weekIcon} name='calendar' color='white' size='14' />
+           <Text style={styles.text}>Segunda, terça, quarta</Text>
+        </TouchableOpacity>
+        <View style={styles.threeDots}>
+          <TouchableOpacity style={styles.edit}>
+            <Feather name="edit-2" size="20" color='#285C82' />
+          </TouchableOpacity>
+        </View>
       </View>
       <Text style={styles.title}>Treino A</Text>
       <Text style={styles.text}>peitorais e ombro</Text>
-      <View style={styles.iconsBlock}>
-        <Image
-          source={require('../../assets/Muscles Icon Pack/Chest muscle.png')}
-          style={styles.icon}
-        />
-        <Image
-          source={require('../../assets/Muscles Icon Pack/Shoulder muscle.png')}
-          style={styles.icon}
-        />
-      </View>
-    </View>
+      <TouchableOpacity style={styles.iconsBlock}>
+        {muscles.peitorais.renderCardIcon()}
+        {muscles.dorsais.renderCardIcon()}
+        {muscles.deltoides.renderCardIcon()}
+        {muscles.triceps.renderCardIcon()}
+      </TouchableOpacity>
+    </TouchableOpacity>
   )
 }
 
@@ -52,28 +57,56 @@ const styles = StyleSheet.create({
     fontSize: 24
   },
   weekBlock: {
-    flex: 1,
     paddingLeft: 6,
     paddingRight: 6,
     borderRadius: 10,
-    flexDirection: "row",
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#285C82',
-    maxHeight: 26
+    maxHeight: 26,
+    maxWidth: 'auto'
   },
   weekIcon: {
     marginRight: 4
   },
   iconsBlock: {
+    minHeight: 40,
     flex: 1,
     flexDirection: 'row',
-    marginTop: 18
+    marginTop: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#002846',
+    borderRadius: 10
   },
   icon: {
     marginRight: 10,
     height: 60,
     width: 60
+  },
+  header: {
+    flex: 1,
+    flexDirection: 'row',
+    width: '100%',
+   // backgroundColor: 'blue'
+  },
+  threeDots: {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    maxWidth: '100%',
+    //backgroundColor: 'green'
+  },
+  edit: {
+    backgroundColor: '#002846',
+    marginRight: 6,
+    marginTop: 6,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
+    height: 40,
+    width: 40
   }
 })
 
