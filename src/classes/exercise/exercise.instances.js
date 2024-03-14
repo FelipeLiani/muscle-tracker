@@ -253,6 +253,54 @@ const hack = new Exercise(
   [muscles.quadriceps],
   require("../../../assets/exercises/hack.jpeg")
 );
+const levantamentoTerra = new Exercise(
+  "levantamento terra",
+  "exercício de musculação",
+  [muscles.costasInferiores],
+  require("../../../assets/exercises/levantamento-terra.jpeg")
+);
+const mergulho = new Exercise(
+  "mergulho no banco",
+  "exercício de musculação",
+  [muscles.triceps],
+  require("../../../assets/exercises/mergulho.jpeg")
+);
+const mesaFlexora = new Exercise(
+  "mesa flexora",
+  "exercício de musculação",
+  [muscles.posterioresDeCoxa],
+  require("../../../assets/exercises/mesa-flexora.jpeg")
+);
+const panturrilhaEmPeBarra = new Exercise(
+  "panturrilha em pé com barra",
+  "exercício de musculação",
+  [muscles.panturrilhas],
+  require("../../../assets/exercises/panturrilha-em-pe-barra.jpeg")
+);
+const panturrilhaEmPeHalter = new Exercise(
+  "panturrilha em pé com halteres",
+  "exercício de musculação",
+  [muscles.panturrilhas],
+  require("../../../assets/exercises/panturrilha-em-pe-halter.jpeg")
+);
+const panturrilhaEmPeMaquina = new Exercise(
+  "panturrilha em pé máquina",
+  "exercício de musculação",
+  [muscles.panturrilhas],
+  require("../../../assets/exercises/panturrilha-em-pe-maquina.jpeg")
+);
+const panturrilhaEmPe = new Exercise(
+  "panturrilha em pé",
+  "exercício de musculação",
+  [muscles.panturrilhas],
+  require("../../../assets/exercises/panturrilha-em-pe.jpeg")
+);
+const panturrilhaSentado = new Exercise(
+  "panturrilha sentado",
+  "exercício de musculação",
+  [muscles.panturrilhas],
+  require("../../../assets/exercises/panturrilha-sentado.jpeg")
+);
 
 export const exercises = {
   lagPress,
@@ -296,5 +344,12 @@ export const exercises = {
   extensaoDeQuadril,
   flexao,
   graviton,
-  hack
+  hack,
+  levantamentoTerra,
+  mergulho,
+  panturrilhaEmPe,
+  panturrilhaSentado,
+  panturrilhaEmPeBarra,
+  panturrilhaEmPeHalter,
+  panturrilhaEmPeMaquina
 };
