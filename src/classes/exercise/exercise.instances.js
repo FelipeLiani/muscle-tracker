@@ -337,6 +337,42 @@ const prancha = new Exercise(
   [muscles.deltoidesPosteriores],
   require("../../../assets/exercises/prancha.jpeg")
 );
+const pulldownPolia = new Exercise(
+  "pulldown na polia",
+  "exercício de musculação",
+  [muscles.dorsais],
+  require("../../../assets/exercises/pulldown-polia.jpeg")
+);
+const pulloverHalter = new Exercise(
+  "pullover com halter",
+  "exercício de musculação",
+  [muscles.peitorais],
+  require("../../../assets/exercises/pullover-halter.jpeg")
+);
+const puxadaAltaSupinadaPolia = new Exercise(
+  "puxada alta supinada na polia",
+  "exercício de musculação",
+  [muscles.dorsais],
+  require("../../../assets/exercises/puxada-alta-fechada-polia.jpeg")
+);
+const puxadaAltaMaquina = new Exercise(
+  "puxada alta máquina",
+  "exercício de musculação",
+  [muscles.dorsais],
+  require("../../../assets/exercises/puxada-alta-maquina.jpeg")
+);
+const puxadaAltaPolia = new Exercise(
+  "puxada alta na polia",
+  "exercício de musculação",
+  [muscles.dorsais],
+  require("../../../assets/exercises/puxada-alta-polia.jpeg")
+);
+const puxadaFrontalPolia = new Exercise(
+  "puxada frontal na polia",
+  "exercício de musculação",
+  [muscles.dorsais],
+  require("../../../assets/exercises/puxada-frontal-polia.jpeg")
+);
 
 export const exercises = {
   lagPress,
@@ -393,5 +429,11 @@ export const exercises = {
   posteriorDeOmbroHalteresInclinado,
   posteriorDeOmbroMaquina,
   posteriorDeOmbroPolia,
-  prancha
+  prancha, 
+  pulldownPolia,
+  pulloverHalter,
+  puxadaAltaPolia,
+  puxadaAltaMaquina,
+  puxadaAltaSupinadaPolia,
+  puxadaFrontalPolia,
 };
