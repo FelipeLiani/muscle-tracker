@@ -1,9 +1,9 @@
 import { StyleSheet, Image } from "react-native";
 
 class Exercise {
-  constructor(name, tag, muscleGroups, path) {
+  constructor(name, isExercicioDeMusculacao, muscleGroups, path) {
     this.name = name;
-    this.tag = tag;
+    this.isExercicioDeMusculacao = isExercicioDeMusculacao;
     this.muscleGroups = muscleGroups;
     this.path = path;
   }
