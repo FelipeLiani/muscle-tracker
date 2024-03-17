@@ -325,8 +325,8 @@ const posteriorDeOmbroMaquina = new Exercise(
   [muscles.deltoidesPosteriores],
   require("../../../assets/exercises/posterior-de-ombro-maquina.jpeg")
 );
-const posteriorDeOmbroPoliaAlta = new Exercise(
-  "posterior de ombro na polia alta",
+const posteriorDeOmbroPolia = new Exercise(
+  "posterior de ombro na polia",
   "exercício de musculação",
   [muscles.deltoidesPosteriores],
   require("../../../assets/exercises/posterior-de-ombro-polia-alta.jpeg")
@@ -392,6 +392,6 @@ export const exercises = {
   posteriorDeOmbroHalter,
   posteriorDeOmbroHalteresInclinado,
   posteriorDeOmbroMaquina,
-  posteriorDeOmbroPoliaAlta,
+  posteriorDeOmbroPolia,
   prancha
 };
