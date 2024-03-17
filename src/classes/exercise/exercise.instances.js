@@ -301,6 +301,42 @@ const panturrilhaSentado = new Exercise(
   [muscles.panturrilhas],
   require("../../../assets/exercises/panturrilha-sentado.jpeg")
 );
+const paralelas = new Exercise(
+  "barras paralelas",
+  "exercício de musculação",
+  [muscles.peitorais, muscles.triceps],
+  require("../../../assets/exercises/paralelas.jpeg")
+);
+const posteriorDeOmbroHalter = new Exercise(
+  "posterior de ombro com halteres",
+  "exercício de musculação",
+  [muscles.deltoidesPosteriores],
+  require("../../../assets/exercises/posterior-de-ombro-halter.jpeg")
+);
+const posteriorDeOmbroHalteresInclinado = new Exercise(
+  "posterior de ombro com halteres inclinado",
+  "exercício de musculação",
+  [muscles.deltoidesPosteriores],
+  require("../../../assets/exercises/posterior-de-ombro-halter-inclinado.jpeg")
+);
+const posteriorDeOmbroMaquina = new Exercise(
+  "posterior de ombro máquina",
+  "exercício de musculação",
+  [muscles.deltoidesPosteriores],
+  require("../../../assets/exercises/posterior-de-ombro-maquina.jpeg")
+);
+const posteriorDeOmbroPoliaAlta = new Exercise(
+  "posterior de ombro na polia alta",
+  "exercício de musculação",
+  [muscles.deltoidesPosteriores],
+  require("../../../assets/exercises/posterior-de-ombro-polia-alta.jpeg")
+);
+const prancha = new Exercise(
+  "prancha",
+  "exercício de musculação",
+  [muscles.deltoidesPosteriores],
+  require("../../../assets/exercises/prancha.jpeg")
+);
 
 export const exercises = {
   lagPress,
@@ -351,5 +387,11 @@ export const exercises = {
   panturrilhaSentado,
   panturrilhaEmPeBarra,
   panturrilhaEmPeHalter,
-  panturrilhaEmPeMaquina
+  panturrilhaEmPeMaquina, 
+  paralelas,
+  posteriorDeOmbroHalter,
+  posteriorDeOmbroHalteresInclinado,
+  posteriorDeOmbroMaquina,
+  posteriorDeOmbroPoliaAlta,
+  prancha
 };
