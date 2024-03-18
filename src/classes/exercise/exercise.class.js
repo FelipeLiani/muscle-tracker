@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     width: 94,
     borderRadius: 40,
     borderWidth: 8,
-    borderColor: '#001F36'
+    borderColor: '#001F36',
+    backgroundColor: '#001F36'
   },
   bigIcon: {
     height: 200,

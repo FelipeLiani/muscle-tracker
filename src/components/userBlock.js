@@ -1,6 +1,7 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { exercises } from "../classes/exercise/exercise.instances";
-import AddAchivement from "./addAchivement";
+import { muscles } from "../classes/muscle/muscle.instances";
+import { Feather } from '@expo/vector-icons';
 
 const UserBlock = () => {
   return (
@@ -24,20 +25,39 @@ const UserBlock = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.achievementsRow}>
-          <TouchableOpacity style={styles.achivementItem}>
-            {exercises.cruxifixoMaquina.renderLittleIcon()}
-            <Text style={styles.achivementValue}>8x70kg</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.achivementItem}>
-            {exercises.hack.renderLittleIcon()}
-            <Text style={styles.achivementValue}>8x210kg</Text>
-          </TouchableOpacity>
+          <Achivement
+            renderFunction={exercises.agachamentoSumo.renderLittleIcon()}
+            value={'12x22'}
+          />
+          <Achivement
+            renderFunction={muscles.peitorais.renderLittleIcon()}
+            value={'102cm'}
+          />
           <AddAchivement />
         </View>
       </View>
     </View>
   )
-}
+};
+
+const Achivement = ({ renderFunction, value }) => {
+  return (
+    <TouchableOpacity style={styles.achivementItem}>
+      {renderFunction}
+      <Text style={styles.achivementValue}>{ value }</Text>
+    </TouchableOpacity>
+  )
+};
+
+const AddAchivement = () => {
+  return(
+    <TouchableOpacity style={styles.achivementItem}>
+      <View style={styles.addIcon}>
+        <Feather name='plus-circle' color='#00599f' size='60' />
+      </View>
+    </TouchableOpacity>
+  )
+};
 
 const styles = StyleSheet.create({
   conteiner: {
@@ -58,8 +78,7 @@ const styles = StyleSheet.create({
   },
   userRow: {
     flexDirection: 'row',
-    alignItems: 'center',
-    //paddingTop: 12
+    alignItems: 'center'
   },
   achievementsRow: {
     justifyContent: 'center',
@@ -67,9 +86,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#002846',
     alignItems: 'top',
     width: 320,
-    height: 132,
+    height: 'auto',
     borderRadius: 20,
-    paddingTop: 4,
+    padding: 4,
     marginTop: 12
   },
   achivementItem: {
@@ -87,6 +106,16 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 100
+  },
+  addIcon: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 94,
+    width: 94,
+    borderRadius: 40,
+    borderWidth: 8,
+    borderColor: '#001F36',
+    backgroundColor: '#001F36'
   },
   userDataBlock: {
     justifyContent: 'center',

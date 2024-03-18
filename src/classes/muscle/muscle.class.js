@@ -6,6 +6,15 @@ class Muscle {
     this.iconPath = iconPath;
   }
 
+  renderLittleIcon() {
+    return (
+      <Image
+        source={this.iconPath}
+        style={styles.littleIcon}
+      />
+    )
+  }
+
   renderCardIcon() {
     return(
       <Image
@@ -17,6 +26,13 @@ class Muscle {
 }
 
 const styles = StyleSheet.create({
+  littleIcon: {
+    height: 94,
+    width: 94,
+    borderRadius: 40,
+    borderWidth: 8,
+    borderColor: '#001F36'
+  },
   cardIcon: {
     margin: 5,
     height: 60,
