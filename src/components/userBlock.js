@@ -25,14 +25,8 @@ const UserBlock = () => {
           </TouchableOpacity>
         </View>
         <View style={styles.achievementsRow}>
-          <Achivement
-            renderFunction={exercises.agachamentoSumo.renderLittleIcon()}
-            value={'12x22'}
-          />
-          <Achivement
-            renderFunction={muscles.peitorais.renderLittleIcon()}
-            value={'102cm'}
-          />
+          <AddAchivement />
+          <AddAchivement />
           <AddAchivement />
         </View>
       </View>
@@ -53,7 +47,7 @@ const AddAchivement = () => {
   return(
     <TouchableOpacity style={styles.achivementItem}>
       <View style={styles.addIcon}>
-        <Feather name='plus-circle' color='#00599f' size='60' />
+        <Feather name='plus-circle' color='#285C82' size='60' />
       </View>
     </TouchableOpacity>
   )
@@ -88,7 +82,7 @@ const styles = StyleSheet.create({
     width: 320,
     height: 'auto',
     borderRadius: 20,
-    padding: 4,
+    padding: 8,
     marginTop: 12
   },
   achivementItem: {

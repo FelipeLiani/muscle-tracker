@@ -13,7 +13,7 @@ export default function TrainingSheets({ navigation }) {
       <View style={GlobalStyles.header}>
         <TouchableOpacity
           style={GlobalStyles.button}
-          onPress={() => {navigation.navigate("settings")}}
+          onPress={() => {navigation.navigate("creation choice")}}
         >
           <Feather name='plus' color='white' size='25' />
         </TouchableOpacity>
