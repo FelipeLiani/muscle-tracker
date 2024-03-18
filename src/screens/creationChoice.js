@@ -6,10 +6,15 @@ import OptionBlock from "../components/optionBlock";
 
 export default function CreationChoice({ navigation }) {
 
+  function NavigateToCustomCreation() {
+    navigation.navigate('custom creation')
+  }
+
   const CreationChoice = {
     option1: {
       label: "Criar ficha personalizada",
-      icon: "sliders"
+      icon: "sliders",
+      onPress: NavigateToCustomCreation
     },
     option2: {
       label: "Criar ficha automática",
