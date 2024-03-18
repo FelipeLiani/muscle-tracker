@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, ScrollView } from "react-native";
+import { View, TouchableOpacity, ScrollView, Text, StyleSheet } from "react-native";
 import { GlobalStyles } from "../../styles/global.styles";
 import { Feather } from '@expo/vector-icons';
 import Title from '../components/title';
@@ -30,7 +30,42 @@ export default function CreationChoice({ navigation }) {
       <Title content="Nova ficha" />
       <ScrollView style={GlobalStyles.main}>
         <OptionBlock options={CreationChoice} subtitle='MÉTODO DE CRIAÇÃO'/>
+        <View>
+          <View style={styles.paragraph}>
+            <Text style={styles.title}>FICHA PERSONALIZADA{'\n'}</Text>
+            <Text style={styles.text}>
+              CRIE SUA PRÓPRIA FICHA DE TREINO.
+              {'\n'}
+            </Text>
+          </View>
+          <View style={styles.paragraph}>
+            <Text style={styles.title}>FICHA AUTOMÁTICA{'\n'}</Text>
+            <Text style={styles.text}>
+              DEIXE QUE O ALGOTÍTIMO CRIE UMA FICHA DE TREINO COM BASE NOS 
+              AGRUPAMENTOS MUSCULARES, NÚMERO DE SÉRIES E EQUIPAMENTOS DISPONÍVEIS.
+              {'\n'}
+            </Text>
+          </View>
+        </View>
       </ScrollView>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  text: {
+    marginTop: -14,
+    fontSize: 14,
+    color: 'white',
+    textAlign: 'center'
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'center'
+  },
+  paragraph: {
+    marginTop: 22
+  }
+})
