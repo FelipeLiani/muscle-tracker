@@ -1,5 +1,6 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { exercises } from "../classes/exercise/exercise.instances";
+import AddAchivement from "./addAchivement";
 
 const UserBlock = () => {
   return (
@@ -31,10 +32,7 @@ const UserBlock = () => {
             {exercises.hack.renderLittleIcon()}
             <Text style={styles.achivementValue}>8x210kg</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.achivementItem}>
-            {exercises.elevacaoFrontalHalterSentado.renderLittleIcon()}
-            <Text style={styles.achivementValue}>8x12kg</Text>
-          </TouchableOpacity>
+          <AddAchivement />
         </View>
       </View>
     </View>
