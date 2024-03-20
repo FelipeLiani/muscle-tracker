@@ -33,11 +33,12 @@ const Input = ({ placeholder, icon, value, onChangeValue }) => {
              onChangeText={ onChangeValue }
              value={ value }
              placeholder={ placeholder }
+             placeholderTextColor='white'
            />
          </SafeAreaView>
        </View>
        <View style={styles.icon}>
-         <Feather name='chevrons-right' color='white' size='25' />
+         <Feather name='clipboard' color='white' size='25' />
        </View>
      </View>
     </View>
@@ -86,11 +87,16 @@ const styles = StyleSheet.create({
     paddingRight: 10
    },
   input: {
-    height: 40,
+    height: 45,
     marginLeft: 18,
     borderWidth: 1,
     padding: 10,
-    backgroundColor: 'white',
+    fontSize: 18,
+    backgroundColor: 'transparent',
+    borderColor: 'transparent',
+    color: 'white',
+    minWidth: 160,
+    maxWidth: 260,
     borderRadius: 20
   },
   title: {
