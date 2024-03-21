@@ -12,7 +12,6 @@ const InputBlock = ({ subtitle, inputs }) => {
             key={key}
             placeholder={input.placeholder}
             inputTitle={input.inputTitle}
-            icon={input.icon}
             value={input.value}
             onChangeValue={input.onChangeValue}
           />
@@ -22,13 +21,13 @@ const InputBlock = ({ subtitle, inputs }) => {
   )
 }
 
-const Input = ({ inputTitle, placeholder, icon, value, onChangeValue }) => {
+const Input = ({ inputTitle, placeholder, value, onChangeValue }) => {
   return(
     <View style={styles.option}>
      <View style={styles.name}>
        <View style={styles.label}>
          <Text style={styles.inputTitle}>{ inputTitle }</Text>
-         <SafeAreaView>
+         <SafeAreaView style={styles.inputBlock}>
            <TextInput
              style={styles.input}
              onChangeText={ onChangeValue }
@@ -38,9 +37,7 @@ const Input = ({ inputTitle, placeholder, icon, value, onChangeValue }) => {
            />
          </SafeAreaView>
        </View>
-       <View style={styles.icon}>
-         <Feather name={ icon } color='white' size='25' />
-       </View>
+
      </View>
     </View>
   )
@@ -84,9 +81,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center'
   },
-  icon: {
-    paddingRight: 10
-   },
   input: {
     height: 45,
     marginLeft: 2,
@@ -99,6 +93,11 @@ const styles = StyleSheet.create({
     minWidth: 160,
     maxWidth: 260,
     borderRadius: 20
+  },
+  inputBlock: {
+    flex: 1,
+    alignItems: 'flex-end',
+    marginRight: 60
   },
   inputTitle: {
     color: '#5B94BE',

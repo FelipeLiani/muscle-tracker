@@ -15,14 +15,12 @@ export default function CustomCreation({ navigation }) {
     input1: {
       placeholder: 'placeholder',
       inputTitle: 'titulo',
-      icon: 'type',
       value: titleValue,
       onChangeValue: onChangeTitleValue
     },
     input2: {
       placeholder: 'placeholder',
       inputTitle: 'descrição',
-      icon: 'paperclip',
       value: descriptionValue,
       onChangeValue: onChangeDescriptionValue
     },
