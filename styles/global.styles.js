@@ -21,7 +21,7 @@ export const GlobalStyles = StyleSheet.create({
     width: 350,
     maxHeight: 65,
     top: 50,
-    marginBottom: 10
+    marginBottom: 10,
   },
   main: {
     flex: 1,

@@ -1,15 +1,27 @@
 import React from 'react';
-import { View, TouchableOpacity, ScrollView } from "react-native";
+import { View, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
 import { GlobalStyles } from "../../styles/global.styles";
 import { Feather } from '@expo/vector-icons';
 import Title from "../components/title";
 import InputBlock from '../components/inputBlock';
-
+import OptionBlock from "../components/optionBlock";
 
 export default function CustomCreation({ navigation }) {
   const [titleValue, onChangeTitleValue] = React.useState('Treino A');
   const [descriptionValue, onChangeDescriptionValue] = React.useState('');
   const [weekdayValue, onChangeWeekdayValue] = React.useState('');
+
+  function navigateToGoPro() {
+    navigation.navigate("go pro!")
+  };
+
+  const Options = {
+    option1: {
+      label: "dia(s) da semana",
+      icon: 'calendar',
+      onPress: navigateToGoPro
+    }
+  };
 
   const Inputs = {
     input1: {
@@ -19,19 +31,12 @@ export default function CustomCreation({ navigation }) {
       onChangeValue: onChangeTitleValue
     },
     input2: {
-      placeholder: 'placeholder',
+      placeholder: '(opcional)',
       inputTitle: 'descrição',
       value: descriptionValue,
       onChangeValue: onChangeDescriptionValue
-    },
-    input3: {
-      placeholder: '',
-      inputTitle: 'dia(s) da semana',
-      icon: 'calendar',
-      value: weekdayValue,
-      onChangeValue: onChangeWeekdayValue
-    },
-  }
+    }
+  };
 
   return (
     <View style={GlobalStyles.columnLayout}>
@@ -42,11 +47,25 @@ export default function CustomCreation({ navigation }) {
         >
           <Feather name='chevron-left' color='white' size='25' />
         </TouchableOpacity>
-      </View>
+    </View>
     <Title content={ titleValue }/>
     <ScrollView style={GlobalStyles.main}>
-      <InputBlock inputs={Inputs} subtitle="subtitulo" />
+      <View style={styles.inputBlock}>
+        <InputBlock inputs={Inputs} />
+      </View>
+      <View style={styles.optionBlock}>
+        <OptionBlock style={styles.OptionBlock } options={Options} />
+      </View>
     </ScrollView>
   </View>
   )
 }
+
+const styles = StyleSheet.create({
+  inputBlock: {
+    marginTop: -60
+  },
+  optionBlock: {
+    marginTop: -80
+  }
+})
