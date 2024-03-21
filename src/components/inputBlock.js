@@ -9,9 +9,10 @@ const InputBlock = ({ subtitle, inputs }) => {
       <View style={styles.block}>
         {Object.entries(inputs).map(([key, input]) => (
           <Input
-            key={key} 
-            placeholder={input.placeholder} 
-            icon={input.icon} 
+            key={key}
+            placeholder={input.placeholder}
+            inputTitle={input.inputTitle}
+            icon={input.icon}
             value={input.value}
             onChangeValue={input.onChangeValue}
           />
@@ -21,24 +22,24 @@ const InputBlock = ({ subtitle, inputs }) => {
   )
 }
 
-const Input = ({ placeholder, icon, value, onChangeValue }) => {
+const Input = ({ inputTitle, placeholder, icon, value, onChangeValue }) => {
   return(
     <View style={styles.option}>
      <View style={styles.name}>
        <View style={styles.label}>
-         <Feather name={ icon } color='white' size='20' />
+         <Text style={styles.inputTitle}>{ inputTitle }</Text>
          <SafeAreaView>
            <TextInput
              style={styles.input}
              onChangeText={ onChangeValue }
              value={ value }
              placeholder={ placeholder }
-             placeholderTextColor='white'
+             placeholderTextColor='#2F4C61'
            />
          </SafeAreaView>
        </View>
        <View style={styles.icon}>
-         <Feather name='clipboard' color='white' size='25' />
+         <Feather name={ icon } color='white' size='25' />
        </View>
      </View>
     </View>
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
   block: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: '#00111D',
+    backgroundColor: '#182631',
     width: "full",
     height: "auto",
     borderRadius: 20,
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
    },
   input: {
     height: 45,
-    marginLeft: 18,
+    marginLeft: 2,
     borderWidth: 1,
     padding: 10,
     fontSize: 18,
@@ -98,6 +99,11 @@ const styles = StyleSheet.create({
     minWidth: 160,
     maxWidth: 260,
     borderRadius: 20
+  },
+  inputTitle: {
+    color: '#5B94BE',
+    fontWeight: 'bold',
+    fontSize: 18,
   },
   title: {
     flex: 1,

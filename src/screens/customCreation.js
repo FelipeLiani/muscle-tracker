@@ -7,15 +7,32 @@ import InputBlock from '../components/inputBlock';
 
 
 export default function CustomCreation({ navigation }) {
-  const [value, onChangeValue] = React.useState('');
- 
+  const [titleValue, onChangeTitleValue] = React.useState('Treino A');
+  const [descriptionValue, onChangeDescriptionValue] = React.useState('');
+  const [weekdayValue, onChangeWeekdayValue] = React.useState('');
+
   const Inputs = {
     input1: {
       placeholder: 'placeholder',
-      icon: 'chevron-left',
-      value: value,
-      onChangeValue: onChangeValue
-    }
+      inputTitle: 'titulo',
+      icon: 'type',
+      value: titleValue,
+      onChangeValue: onChangeTitleValue
+    },
+    input2: {
+      placeholder: 'placeholder',
+      inputTitle: 'descrição',
+      icon: 'paperclip',
+      value: descriptionValue,
+      onChangeValue: onChangeDescriptionValue
+    },
+    input3: {
+      placeholder: '',
+      inputTitle: 'dia(s) da semana',
+      icon: 'calendar',
+      value: weekdayValue,
+      onChangeValue: onChangeWeekdayValue
+    },
   }
 
   return (
@@ -28,7 +45,7 @@ export default function CustomCreation({ navigation }) {
           <Feather name='chevron-left' color='white' size='25' />
         </TouchableOpacity>
       </View>
-    <Title content="Criar ficha P"/>
+    <Title content={ titleValue }/>
     <ScrollView style={GlobalStyles.main}>
       <InputBlock inputs={Inputs} subtitle="subtitulo" />
     </ScrollView>
