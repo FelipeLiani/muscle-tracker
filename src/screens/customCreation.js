@@ -4,25 +4,24 @@ import { GlobalStyles } from "../../styles/global.styles";
 import { Feather } from '@expo/vector-icons';
 import Title from "../components/title";
 import InputBlock from '../components/inputBlock';
-import WeekDaySelect from '../components/weekDaySelect';
+import { WeekDaySelect, selectedWeekDays } from '../components/weekDaySelect';
 
 export default function CustomCreation({ navigation }) {
-  const [titleValue, onChangeTitleValue] = React.useState('Treino A');
-  const [descriptionValue, onChangeDescriptionValue] = React.useState('');
-  // const [weekdayValue, onChangeWeekdayValue] = React.useState('');
+  const [titleValue, setTitleValue] = React.useState('Treino A');
+  const [descriptionValue, setDescriptionValue] = React.useState('');
 
   const Inputs = {
     input1: {
       placeholder: 'placeholder',
-      inputTitle: 'titulo',
+      inputTitle: 'título',
       value: titleValue,
-      onChangeValue: onChangeTitleValue
+      onChangeValue: setTitleValue
     },
     input2: {
       placeholder: '(opcional)',
       inputTitle: 'descrição',
       value: descriptionValue,
-      onChangeValue: onChangeDescriptionValue
+      onChangeValue: setDescriptionValue
     }
   };
 
