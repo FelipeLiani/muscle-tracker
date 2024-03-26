@@ -1,6 +1,5 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, TextInput, View, Text } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 
 const InputBlock = ({ subtitle, inputs }) => {
   return (
@@ -37,7 +36,6 @@ const Input = ({ inputTitle, placeholder, value, onChangeValue }) => {
            />
          </SafeAreaView>
        </View>
-
      </View>
     </View>
   )

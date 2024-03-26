@@ -11,7 +11,7 @@ export default function CustomCreation({ navigation }) {
   const [titleValue, setTitleValue] = React.useState('Treino A');
   const [descriptionValue, setDescriptionValue] = React.useState('');
 
-  async function saveNew() {
+  async function saveNewTrainingSheet() {
     const dataToSave = {
       title: titleValue,
       description: descriptionValue,
@@ -19,6 +19,8 @@ export default function CustomCreation({ navigation }) {
     }
     try {
       await trainingSheetModel.create(dataToSave)
+      const response = await trainingSheetModel.all()
+      console.log(response)
     } catch(err) {
       console.log(err)
     }
@@ -55,7 +57,7 @@ export default function CustomCreation({ navigation }) {
         <InputBlock inputs={Inputs} />
       </View>
       <WeekDaySelect />
-      <TouchableOpacity onPress={saveNew} style={styles.button}>
+      <TouchableOpacity onPress={saveNewTrainingSheet} style={styles.button}>
         <Text>Clique me</Text>
       </TouchableOpacity>
     </ScrollView>
